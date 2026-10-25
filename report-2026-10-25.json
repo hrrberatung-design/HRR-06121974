@@ -1,0 +1,794 @@
+{
+ "schema": 1,
+ "meta": {
+  "id": "report-2026-10-25",
+  "kind": "archive",
+  "title": "BTC · ETH · SOL · XRP — Woche 19.–25. Oktober 2026",
+  "eyebrow": "Krypto-Wochen-Dashboard",
+  "subtitle": "Spot-ETF-Inflows, Derivate (Open Interest, Funding, Liquidationen) und On-Chain-Metriken im Wochenvergleich — mit Analyse, wie stark institutionelle Zuflüsse im Vergleich zu Derivate-Hebeln die Kurse geprägt haben. **Kursdatenstand: 25.10.2026, ca. 09:00 UTC** (Sonntag, Handelslauf noch nicht abgeschlossen). ETF-Flows: US-Spot-ETFs, Handelstage 19.–23.10.",
+  "period": {
+   "from": "2026-10-19",
+   "to": "2026-10-25",
+   "label": "19.–25.10.2026"
+  },
+  "priceAsOf": {
+   "iso": "2026-10-25T09:00:00Z",
+   "approximate": true,
+   "label": "25.10.2026, ca. 09:00 UTC"
+  },
+  "comparisonPeriod": {
+   "label": "12.–18.10.2026"
+  },
+  "statusNote": "Archivbericht mit übernommenen historischen Berichtsdaten, keine Live-Daten und keine automatische Aktualisierung. Zahlen wurden für die PWA-Umsetzung nicht erneut finanziell verifiziert."
+ },
+ "coins": {
+  "BTC": {
+   "color": "#f7931a",
+   "price": 80299.99,
+   "marketCap": 1604700000000,
+   "weekReturnPct": -2.08,
+   "indexSeries": [
+    100,
+    99.79,
+    101.14,
+    102.46,
+    99.15,
+    98.87,
+    98.49,
+    97.92
+   ],
+   "etfWeek": {
+    "text": "+301,2 Mio. $*",
+    "bp": 1.9,
+    "bpMark": ""
+   },
+   "kpi": {
+    "hiLo": "$84.856 / $79.107",
+    "hiLoLabel": "Wochenhoch/-tief",
+    "mcapText": "$1,60 Bio."
+   },
+   "previous": {
+    "start": 83678.29,
+    "end": 82006.85,
+    "current": 80299.99,
+    "high": 84261.99,
+    "low": 79676.02
+   }
+  },
+  "ETH": {
+   "color": "#8b9dff",
+   "price": 2333,
+   "marketCap": 281550000000,
+   "weekReturnPct": -3.09,
+   "indexSeries": [
+    100,
+    99.9,
+    101.62,
+    102.67,
+    99.1,
+    99.04,
+    97.83,
+    96.91
+   ],
+   "etfWeek": {
+    "text": "−220,6 Mio. $",
+    "bp": -7.8,
+    "bpMark": ""
+   },
+   "kpi": {
+    "hiLo": "$2.524 / $2.276",
+    "hiLoLabel": "Wochenhoch/-tief",
+    "mcapText": "$281 Mrd."
+   },
+   "previous": {
+    "start": 2534.22,
+    "end": 2407.51,
+    "current": 2333,
+    "high": 2576.89,
+    "low": 2313.07
+   }
+  },
+  "SOL": {
+   "color": "#3fe0a0",
+   "price": 100.74,
+   "marketCap": 56876000000,
+   "weekReturnPct": -3.13,
+   "indexSeries": [
+    100,
+    100.93,
+    102.35,
+    102.77,
+    99.56,
+    98.77,
+    98.31,
+    96.87
+   ],
+   "etfWeek": {
+    "text": "−30,3 Mio. $*",
+    "bp": -5.3,
+    "bpMark": "*"
+   },
+   "kpi": {
+    "hiLo": "$109,13 / $98,51",
+    "hiLoLabel": "Wochenhoch/-tief",
+    "mcapText": "$56,9 Mrd."
+   },
+   "previous": {
+    "start": 111.21,
+    "end": 103.99,
+    "current": 100.74,
+    "high": 113.26,
+    "low": 100.32
+   }
+  },
+  "XRP": {
+   "color": "#a8b3c4",
+   "price": 1.2936,
+   "marketCap": 78582000000,
+   "weekReturnPct": -0.9,
+   "indexSeries": [
+    100,
+    99.77,
+    102.24,
+    104.51,
+    100.15,
+    99.05,
+    99.42,
+    99.1
+   ],
+   "etfWeek": {
+    "text": "nicht belastbar**",
+    "bp": null,
+    "bpMark": ""
+   },
+   "kpi": {
+    "hiLo": "$1,398 / $1,253",
+    "hiLoLabel": "Wochenhoch/-tief",
+    "mcapText": "$78,6 Mrd."
+   },
+   "previous": {
+    "start": 1.4088,
+    "end": 1.3054,
+    "current": 1.2936,
+    "high": 1.4196,
+    "low": 1.2547
+   }
+  }
+ },
+ "coinOrder": [
+  "BTC",
+  "ETH",
+  "SOL",
+  "XRP"
+ ],
+ "charts": {
+  "perf": {
+   "title": "Wochenperformance (indiziert, 18.10. = 0 %)",
+   "note": "Tages-Schlusskurse · Rallye bis Mittwoch 21.10., danach Abverkauf · Quelle: Finanzdatenquelle (Realtime)",
+   "labels": [
+    "So 18.",
+    "Mo 19.",
+    "Di 20.",
+    "Mi 21.",
+    "Do 22.",
+    "Fr 23.",
+    "Sa 24.",
+    "So 25."
+   ],
+   "baseline": 100
+  },
+  "flow": {
+   "title": "ETF-Tagesflüsse (Mio. USD)",
+   "note": "US-Spot-ETFs · Dargestellt: BTC und ETH. Hinweise zur Datenverfügbarkeit von SOL und XRP stehen in Tabelle und Fußnoten · Quellen: The Block, Benzinga, SatsIntel, byKaranteli",
+   "labels": [
+    "Mo 19.10.",
+    "Di 20.10.",
+    "Mi 21.10.",
+    "Do 22.10.",
+    "Fr 23.10."
+   ],
+   "unit": "Mio. $",
+   "series": {
+    "BTC": [
+     526.7,
+     23.2,
+     524.8,
+     -635.5,
+     -137.9
+    ],
+    "ETH": [
+     -103.3,
+     -26.1,
+     15,
+     -110.5,
+     4.4
+    ]
+   }
+  },
+  "bp": {
+   "title": "ETF-Wochenfluss in Basispunkten der Marktkapitalisierung",
+   "note": "Normiert auf Marktkapitalisierung 25.10. · * SOL: Flussfenster 5 Handelstage bis 22.10. (kein konsolidierter Wochenwert) · XRP nicht dargestellt: Wochenfluss wegen abweichender Quellen-Produktabdeckung nicht belastbar"
+  },
+  "ret": {
+   "title": "Wochenrendite (%)",
+   "note": "18.10.-Schluss → Zwischenstand 25.10., ca. 09:00 UTC (Handelswoche am Sonntag noch nicht abgeschlossen) · ETH und SOL am schwächsten, XRP am widerstandsfähigsten"
+  }
+ },
+ "comparison": {
+  "note": "**Vorwochenvergleich: 12.–18.10.2026.** Die rechte Spalte folgt dem Coin-Filter. Kurse: Vorwochenschluss 18.10.; Wochenrendite: 11.→18.10. gegenüber 18.→25.10. (aktueller Zwischenstand ca. 09:00 UTC, daher vorläufig). Renditedifferenzen in Prozentpunkten (pp). Fehlende gleichartige Vergleichsdaten bleiben ausdrücklich offen.",
+  "header": "Vorwochenvergleich 12.–18.10.2026"
+ },
+ "table": {
+  "groups": [
+   {
+    "key": "Kurs",
+    "name": "Kurs & Markt",
+    "source": "Quellen: Kurse/Marktkapitalisierung — Finanzdatenquelle, Zwischenstand 25.10. ca. 09:00 UTC (Handelswoche am Sonntag noch nicht abgeschlossen); Tages-Schlusskurse 18.–25.10. Vorwochenwerte und Renditedifferenzen aus denselben archivierten Finanzdaten-CSV-Dateien berechnet.",
+    "rows": [
+     {
+      "id": "kurs-0",
+      "label": "Kurs (25.10., ca. 09:00 UTC)",
+      "cells": {
+       "BTC": {
+        "t": "$80.300"
+       },
+       "ETH": {
+        "t": "$2.333"
+       },
+       "SOL": {
+        "t": "$100,74"
+       },
+       "XRP": {
+        "t": "$1,294"
+       }
+      },
+      "wow": {
+       "type": "price"
+      }
+     },
+     {
+      "id": "kurs-1",
+      "label": "Wochenperformance (18.→25.10.)",
+      "cells": {
+       "BTC": {
+        "t": "−2,1 %",
+        "tone": "dn"
+       },
+       "ETH": {
+        "t": "−3,1 %",
+        "tone": "dn"
+       },
+       "SOL": {
+        "t": "−3,1 %",
+        "tone": "dn"
+       },
+       "XRP": {
+        "t": "−0,9 %",
+        "tone": "dn"
+       }
+      },
+      "wow": {
+       "type": "perf"
+      }
+     },
+     {
+      "id": "kurs-2",
+      "label": "Wochenhoch / -tief",
+      "cells": {
+       "BTC": {
+        "t": "$84.856 / $79.107"
+       },
+       "ETH": {
+        "t": "$2.524 / $2.276"
+       },
+       "SOL": {
+        "t": "$109,13 / $98,51"
+       },
+       "XRP": {
+        "t": "$1,398 / $1,253"
+       }
+      },
+      "wow": {
+       "type": "hilo"
+      }
+     },
+     {
+      "id": "kurs-3",
+      "label": "Marktkapitalisierung",
+      "cells": {
+       "BTC": {
+        "t": "$1,60 Bio."
+       },
+       "ETH": {
+        "t": "$281 Mrd."
+       },
+       "SOL": {
+        "t": "$56,9 Mrd."
+       },
+       "XRP": {
+        "t": "$78,6 Mrd."
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {}
+      }
+     }
+    ]
+   },
+   {
+    "key": "ETF",
+    "name": "Spot-ETF-Flows",
+    "source": "Quellen: The Block (Wochenwerte), Benzinga, Cointelegraph, SatsIntel, ByKaranteli, Yahoo Finance, CryptoTicker — US-Spot-ETFs, Handelstage 19.–23.10.",
+    "rows": [
+     {
+      "id": "etf-0",
+      "label": "Wochen-Nettofluss",
+      "cells": {
+       "BTC": {
+        "t": "+$301,2 Mio.*",
+        "tone": "up"
+       },
+       "ETH": {
+        "t": "−$220,6 Mio.",
+        "tone": "dn"
+       },
+       "SOL": {
+        "t": "−$30,3 Mio.*"
+       },
+       "XRP": {
+        "t": "nicht belastbar**"
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {
+        "SOL": {
+         "text": "Nicht bestimmbar: aktueller Fluss nur 5 Handelstage bis 22.10.; kein passender Vorwochenwert."
+        },
+        "XRP": {
+         "text": "Nicht bestimmbar: Produktabdeckung und aktueller Wochenwert nicht konsolidiert."
+        }
+       }
+      }
+     },
+     {
+      "id": "etf-1",
+      "label": "Fluss in Basispunkten der Mcap",
+      "cells": {
+       "BTC": {
+        "t": "+1,9 bp",
+        "tone": "up"
+       },
+       "ETH": {
+        "t": "−7,8 bp",
+        "tone": "dn"
+       },
+       "SOL": {
+        "t": "−5,3 bp*"
+       },
+       "XRP": {
+        "t": "—**"
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {
+        "SOL": {
+         "text": "Nicht bestimmbar: aktueller Fluss nur 5 Handelstage bis 22.10.; kein passender Vorwochenwert."
+        },
+        "XRP": {
+         "text": "Nicht bestimmbar: Produktabdeckung und aktueller Wochenwert nicht konsolidiert."
+        }
+       }
+      }
+     },
+     {
+      "id": "etf-2",
+      "label": "Prägendster Handelstag",
+      "cells": {
+       "BTC": {
+        "t": "Mo: +$526,7 Mio. (IBIT +$665,2 Mio.)"
+       },
+       "ETH": {
+        "t": "Do: −$110,5 Mio."
+       },
+       "SOL": {
+        "t": "Do: −$8,9 Mio. (alle 7 Fonds)"
+       },
+       "XRP": {
+        "t": "Do/Fr: +$3,5 Mio. (nur XRPZ)"
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {
+        "SOL": {
+         "text": "Nicht bestimmbar: aktueller Fluss nur 5 Handelstage bis 22.10.; kein passender Vorwochenwert."
+        },
+        "XRP": {
+         "text": "Nicht bestimmbar: Produktabdeckung und aktueller Wochenwert nicht konsolidiert."
+        }
+       }
+      }
+     },
+     {
+      "id": "etf-3",
+      "label": "ETF-Nettovermögen",
+      "cells": {
+       "BTC": {
+        "t": "$104,4 Mrd."
+       },
+       "ETH": {
+        "t": "≈ $15,4 Mrd. (21.10.)"
+       },
+       "SOL": {
+        "t": "kum. Zuflüsse ≈ $1,6 Mrd., Vermögen k. a."
+       },
+       "XRP": {
+        "t": "$1,49 Mrd."
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {
+        "SOL": {
+         "text": "Nicht bestimmbar: aktueller Fluss nur 5 Handelstage bis 22.10.; kein passender Vorwochenwert."
+        },
+        "XRP": {
+         "text": "Nicht bestimmbar: Produktabdeckung und aktueller Wochenwert nicht konsolidiert."
+        }
+       }
+      }
+     }
+    ]
+   },
+   {
+    "key": "Derivate",
+    "name": "Derivate & Liquidationen",
+    "source": "Quellen: TokenPost-Snapshots (CoinGlass-Daten, Börsenabdeckung unbekannt) 20./24.10.; The Block (Liquidationsfenster, OI gesamt) 24.10. — Snapshots, keine Vollmarktabdeckung.",
+    "rows": [
+     {
+      "id": "derivate-0",
+      "label": "Funding Rate, 8 h (Snapshots)",
+      "cells": {
+       "BTC": {
+        "t": "20.10.: 0,0021 % (2,3 % p.a.) / 24.10.: 0,0081 %"
+       },
+       "ETH": {
+        "t": "20.10.: 0,0005 % / 24.10.: 0,0078 %"
+       },
+       "SOL": {
+        "t": "20.10.: 0,0047 % (5,1 % p.a., höchster Satz im 5-Asset-Snapshot)"
+       },
+       "XRP": {
+        "t": "20.10.: 0,0005 %"
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein zeitlich und hinsichtlich Börsenabdeckung vergleichbarer Vorwochen-Snapshot."
+       },
+       "coins": {}
+      }
+     },
+     {
+      "id": "derivate-1",
+      "label": "Long-Anteil der Konten (20.10.)",
+      "cells": {
+       "BTC": {
+        "t": "64,3 %"
+       },
+       "ETH": {
+        "t": "76,0 % (höchster)"
+       },
+       "SOL": {
+        "t": "71,3 %"
+       },
+       "XRP": {
+        "t": "72,8 %"
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein zeitlich und hinsichtlich Börsenabdeckung vergleichbarer Vorwochen-Snapshot."
+       },
+       "coins": {}
+      }
+     },
+     {
+      "id": "derivate-2",
+      "label": "Open Interest (20.10.-Snapshot)",
+      "cells": {
+       "BTC": {
+        "t": "$7,78 Mrd."
+       },
+       "ETH": {
+        "t": "$5,53 Mrd."
+       },
+       "SOL": {
+        "t": "$921 Mio."
+       },
+       "XRP": {
+        "t": "$412 Mio."
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein zeitlich und hinsichtlich Börsenabdeckung vergleichbarer Vorwochen-Snapshot."
+       },
+       "coins": {}
+      }
+     },
+     {
+      "id": "derivate-3",
+      "label": "Liquidationen (24.10.)",
+      "cells": {
+       "BTC": {
+        "t": "$232,6 Mio. (24h-Snapshot)"
+       },
+       "ETH": {
+        "t": "$181,5 Mio. (24h-Snapshot)"
+       },
+       "SOL": {
+        "t": "k. a."
+       },
+       "XRP": {
+        "t": "k. a."
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein zeitlich und hinsichtlich Börsenabdeckung vergleichbarer Vorwochen-Snapshot."
+       },
+       "coins": {}
+      }
+     },
+     {
+      "id": "derivate-4",
+      "label": "Liquidations-Kontext",
+      "wide": "Gesamtmarkt 24h (24.10.): $815 Mio. laut The Block bzw. $837 Mio. laut BeInCrypto/Coinglass (jeweils überwiegend Longs); 4h-Fenster: $436 Mio., davon $404 Mio. Longs; BTC/ETH je > 92 % Longs im 4h-Fenster",
+      "wow": {
+       "type": "shared",
+       "text": "Kein gleichartiger Vorwochen-Snapshot mit identischem Zeitfenster hinterlegt."
+      }
+     }
+    ]
+   },
+   {
+    "key": "On-Chain",
+    "name": "On-Chain",
+    "source": "Quellen: DefiLlama via TokenPost (TVL 23.10., 11:00 UTC); TokenPost (Netzwerkerlöse 12.–18.10. = Vorwoche); CryptoTicker (App-Gebühren −35 % WoW).",
+    "rows": [
+     {
+      "id": "on-chain-0",
+      "label": "Chain-TVL (23.10., WoW)",
+      "cells": {
+       "BTC": {
+        "t": "k. a."
+       },
+       "ETH": {
+        "t": "$49,5 Mrd. (−1,2 %)"
+       },
+       "SOL": {
+        "t": "$5,9 Mrd. (−2,5 %)"
+       },
+       "XRP": {
+        "t": "k. a."
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {
+        "ETH": {
+         "text": "−1,2 % WoW (Quelle, Stand 23.10.)",
+         "detail": "Vergleich zum 16.10., nicht zum 18.10.; absoluter Vorwochenwert nicht separat belegt."
+        },
+        "SOL": {
+         "text": "−2,5 % WoW (Quelle, Stand 23.10.)",
+         "detail": "Vergleich zum 16.10., nicht zum 18.10.; absoluter Vorwochenwert nicht separat belegt."
+        }
+       }
+      }
+     },
+     {
+      "id": "on-chain-1",
+      "label": "Netzwerkerlöse (Vorwoche 12.–18.10.)",
+      "cells": {
+       "BTC": {
+        "t": "$1,5 Mio."
+       },
+       "ETH": {
+        "t": "$2,87 Mio."
+       },
+       "SOL": {
+        "t": "$6,54 Mio. (Rang 1, 5. Woche in Folge)"
+       },
+       "XRP": {
+        "t": "nicht im Ranking"
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Bereits Vorwochendaten (12.–18.10.).",
+        "detail": "Kein gleichartiger aktueller Wochenwert zum Vergleich hinterlegt."
+       },
+       "coins": {}
+      }
+     },
+     {
+      "id": "on-chain-2",
+      "label": "DeFi-TVL gesamt (23.10.)",
+      "wide": "$90,16 Mrd. (+0,98 % WoW; ~21 % unter Jahresanfang)",
+      "wow": {
+       "type": "shared",
+       "text": "Quelle meldet +0,98 % WoW. Absoluter Vorwochenstand nicht separat belegt."
+      }
+     },
+     {
+      "id": "on-chain-3",
+      "label": "App-Gebühren 7 T. (≈24.10.)",
+      "cells": {
+       "BTC": {
+        "t": "k. a."
+       },
+       "ETH": {
+        "t": "k. a."
+       },
+       "SOL": {
+        "t": "$99,6 Mio. (−35,3 % WoW)"
+       },
+       "XRP": {
+        "t": "k. a."
+       }
+      },
+      "wow": {
+       "type": "static",
+       "default": {
+        "text": "Kein vergleichbarer Vorwochenwert hinterlegt."
+       },
+       "coins": {
+        "SOL": {
+         "text": "−35,3 % WoW (Quelle)",
+         "detail": "Rollierendes 7-Tage-Fenster ≈24.10.; kein Kalenderwochenvergleich."
+        }
+       }
+      }
+     }
+    ]
+   }
+  ],
+  "footnotes": [
+   "* BTC: +$301,2 Mio. = Summe der Tageswerte (Mo +$526,7 / Di +$23,2 / Mi +$524,8 / Do −$635,6 / Fr −$137,9 Mio.); The Block berichtet +$304,7 Mio. — die Abweichung ist ungeklärt, beide Werte ausgewiesen. SOL: kein konsolidierter ETF-Wochenwert für 19.–23.10. veröffentlicht; −$30,3 Mio. über 5 Handelstage bis 22.10. (CryptoTicker) — abweichendes Vergleichsfenster.",
+   "** XRP: kein belastbarer konsolidierter Wochenwert — Quellen weichen ab (unterschiedliche Produktabdeckung, uneinheitliche Freitag-Abrechnung); daher kein Wochenwert und kein bp-Wert ausgewiesen.",
+   "k. a. = keine vergleichbare Kennzahl veröffentlicht. Fehlende Werte wurden nicht geschätzt."
+  ]
+ },
+ "context": {
+  "title": "Wochenverlauf: Rallye, Tech-Sell-off, Long-Flush",
+  "paragraphs": [
+   "Die Woche war zweigeteilt. Bis Mittwoch (21.10.) zogen alle vier Coins an — XRP intrawochen bis +4,5 % — begleitet von **Short-Liquidationen** (u. a. ~$250 Mio. Short-Liquidationen am 21.10. laut TokenPost-Snapshot). Donnerstags kippte der Markt im Gefolge eines **Tech-Sell-offs nach Meta-Earnings**: Am 24.10. (Samstag) meldete The Block für den 24h-Snapshot **$815 Mio.** Liquidationen (überwiegend Longs); im 4-Stunden-Fenster des Samstagnachmittags wurden allein **$404 Mio. Long-Positionen** geräumt. Bitcoin rutschte dabei erstmals seit dem 18. September wieder unter **$80.000**.",
+   "Makro-Rahmen: Nahost-Konflikt und Ölpreis (Brent $116,72 am Freitag), US-Inflationserwartungen bei 4,7 %, FOMC-Sitzung 27.–28.10. unmittelbar bevorstehend. Bitcoin verzeichnete den **dritten Wochenverlust in Folge** und notiert rund 33 % unter seinem 2025er-Hoch; die Gesamt-Marktkapitalisierung lag am 24.10. bei $2,72 Bio. YTD: BTC −6,2 %, ETH −18,9 %."
+  ]
+ },
+ "verdictsTitle": "Institutionelle Zuflüsse vs. Derivate-Hebel — Indizienbild je Coin",
+ "verdicts": [
+  {
+   "coin": "BTC",
+   "title": "Positive Flows, negative Woche — Hebelabbau prägte das Bild",
+   "text": "Netto +$301,2 Mio. (Summe der Tageswerte; The Block: +$304,7 Mio., Abweichung ungeklärt), aber **prozyklisch getaktet**: +$1,08 Mrd. Mo–Mi beim Anstieg auf $84.856, −$774 Mio. Do–Fr beim Abverkauf. Dem positiven Wochenfluss steht ein Kursverlust von −2,1 % gegenüber; die Samstags-Liquidationswelle (überwiegend Longs, BTC-Anteil $232,6 Mio. im 24h-Snapshot) ist mit kurzfristigem Hebelabbau vereinbar. Der relative Einfluss von ETF-Nachfrage vs. Hebelabbau über die Gesamtwoche ist aus den verfügbaren Daten **nicht quantifizierbar**."
+  },
+  {
+   "coin": "ETH",
+   "title": "Abflüsse und Long-lastige Positionierung parallel",
+   "text": "ETF −$220,6 Mio. (−7,8 bp) mit Abflüssen an **3 von 5 Handelstagen**; Oktober kumuliert −$1,18 Mrd. bei Abflüssen an 14 von 17 Handelstagen (ETHA allein ≈ −$954 Mio.). Im 20.10.-Snapshot zugleich der höchste Long-Kontenanteil der vier Coins (76 %) und $181,5 Mio. Liquidationen am Samstag (24h-Snapshot). Kurs −3,1 %, YTD −18,9 %. Der relative Einfluss von ETF-Abflüssen und Derivatepositionierung bleibt **nicht quantifizierbar**."
+  },
+  {
+   "coin": "SOL",
+   "title": "ETF-Abfluss im abweichenden Fenster; Zuordnung offen",
+   "text": "ETF-Abfluss −$30,3 Mio. über 5 Handelstage bis 22.10. (Oktober kumuliert ≈ −$60 Mio.) — kein konsolidierter Wochenwert. Höchstes Funding im 20.10.-Snapshot (≈ 5,1 % p.a.) und Long-Anteil 71 %; die Kursentwicklung (−3,1 %) verlief parallel zum marktweiten Hebelabbau. On-Chain: Solana führte die Netzwerkerlöse in der Vorwoche 12.–18.10. (Rang 1, 5. Woche in Folge; $6,54 Mio.), App-Gebühren fielen −35 % WoW. Ein belastbarer Zuordnungsanteil ist **nicht bestimmbar**."
+  },
+  {
+   "coin": "XRP",
+   "title": "Beste Wochenperformance, Zuordnung offen",
+   "text": "Kein belastbarer konsolidierter ETF-Wochenwert (abweichende Produktabdeckung und Zeitfenster der Quellen) — trotzdem die widerstandsfähigste Wochenperformance (−0,9 %). Eine Zuordnung der Kursbewegung zu ETF-Flüssen oder Derivatepositionierung ist mit den verfügbaren Daten **nicht bestimmbar**; die Positionierungsdaten (Funding +0,0005 %/8h, Long-Anteil 72,8 %, 20.10.-Snapshot) sind nicht konklusiv."
+  }
+ ],
+ "methodology": {
+  "title": "Methodik & Einschränkungen",
+  "items": [
+   "ETF-Flüsse sind **Transaktionsströme**, Open Interest ein **Bestandswert** — beide werden nicht zu einem prozentualen „Wirkungsanteil“ verrechnet. Aussagen sind als Indizienbild zu verstehen, nicht als Kausalmessung.",
+   "ETF-Nachfrage ist nicht ausschließlich institutionell; Derivatepositionen können auch Absicherungen sein.",
+   "Open Interest, Funding Rates und Long-/Short-Kontenanteile: **Snapshots (19./20./24.10.) aus TokenPost/CoinGlass-Daten — Börsenabdeckung unbekannt**, keine Vollmarktabdeckung. USD-OI steigt teilweise allein durch Kursanstiege.",
+   "Liquidationen: 24h-Snapshots und kürzere Fenster **werden nicht zu Wochenwerten aufsummiert**; alle Liquidationsangaben tragen ihr Beobachtungsfenster im Label. Zwei unabhängige 24h-Beobachtungen (24.10.): $815 Mio. (The Block) bzw. $837 Mio. (BeInCrypto/Coinglass).",
+   "BTC-ETF-Wochenfluss: Die zusammengetragenen Tageswerte summieren sich auf +$301,2 Mio.; The Block berichtet +$304,7 Mio. — die Abweichung ist ungeklärt, beide Werte ausgewiesen. SOL: kein konsolidierter Wert für 19.–23.10. veröffentlicht; ausgewiesen ist −$30,3 Mio. über 5 Handelstage bis 22.10. (CryptoTicker) — abweichendes Vergleichsfenster. XRP: kein belastbarer konsolidierter Wochenwert wegen abweichender Produktabdeckung und Zeitfenster — kein Wochenwert, kein bp-Wert.",
+   "Netzwerkerlöse (12.–18.10.) sind **Vorwochen-Daten** (letzte verfügbare Wochenreihe). Chain-TVL ist zwischen BTC, ETH, SOL und XRP nicht voll vergleichbar (BTC/XRP ohne nennenswerte DeFi-TVL-Kennzahl → „k. a.“).",
+   "„k. a.“ = keine vergleichbare Kennzahl veröffentlicht; fehlende Daten wurden nicht geschätzt."
+  ]
+ },
+ "sources": {
+  "title": "Quellen (Beobachtungszeitpunkte im Text)",
+  "links": [
+   {
+    "url": "https://www.theblock.co/news/markets/2026-10-24-crypto-longs-lose-404-million-in-four-hours-as-bitcoin-briefly-slips-below-80000-431608",
+    "label": "The Block — Wochen-ETF-Flows, Liquidationsfenster, OI (24.10.)"
+   },
+   {
+    "url": "https://www.benzinga.com/etfs/specialty-etfs/26/10/62531539/bitcoin-etfs-stage-a-1-billion-comeback-but-ether-etfs-cant-catch-a-break-whats-driving-the-divergence",
+    "label": "Benzinga — BTC/ETH-Tagesflüsse 19.–21.10."
+   },
+   {
+    "url": "https://cointelegraph.com/markets/bitcoin-etfs-527m-inflows-biggest-since-september",
+    "label": "Cointelegraph — BTC-ETF-Flows 19.10., ETH-Abflüsse"
+   },
+   {
+    "url": "https://www.satsintel.io/en/etfs/flows",
+    "label": "SatsIntel — BTC-ETF-Tagesflüsse (Farside-basiert)"
+   },
+   {
+    "url": "https://bykaranteli.com/etf/eth",
+    "label": "ByKaranteli — ETH-ETF-Tagesflüsse je Fonds"
+   },
+   {
+    "url": "https://finance.yahoo.com/markets/crypto/articles/xrp-etfs-took-just-4-000032731.html",
+    "label": "Yahoo Finance — XRP-ETF-Wochenfluss"
+   },
+   {
+    "url": "https://cryptoticker.io/en/solana-price-prediction-etf-outflow-30-million-october-2026/",
+    "label": "CryptoTicker — SOL-ETF-Abflüsse (5 Tage bis 22.10.)"
+   },
+   {
+    "url": "https://finance.yahoo.com/markets/crypto/articles/bitcoin-loses-80-000-200-154722552.html",
+    "label": "Yahoo/BeInCrypto — Liquidations-Snapshot 24.10."
+   },
+   {
+    "url": "https://www.tokenpost.com/news/investing/35831",
+    "label": "TokenPost — OI-/Funding-Snapshot 20.10."
+   },
+   {
+    "url": "https://www.tokenpost.com/news/investing/40239",
+    "label": "TokenPost — Funding-Snapshot 24.10."
+   },
+   {
+    "url": "https://www.tokenpost.com/news/investing/38922",
+    "label": "TokenPost — DeFiLlama-TV L 23.10."
+   },
+   {
+    "url": "https://www.tokenpost.com/news/investing/35619",
+    "label": "TokenPost — Netzwerkerlöse 12.–18.10."
+   },
+   {
+    "url": "https://finbazar.ru/post/706159-bitkoin-na-25-10-2026-itogi-nedeli-padenie-pod-davleniem-blizhnego-vostok",
+    "label": "Finbazar — Wochenrückblick BTC, Makro-Kontext"
+   },
+   {
+    "url": "https://finance.yahoo.com/markets/crypto/articles/ether-etfs-given-back-62-143035053.html",
+    "label": "Yahoo — ETH-ETF-Jahresbilanz, YTD-Kurse"
+   }
+  ],
+  "note": "Kurse & Marktkapitalisierungen: Finanzdatenquelle (Realtime Finance Data), 25.10.2026, ca. 09:00 UTC"
+ }
+}

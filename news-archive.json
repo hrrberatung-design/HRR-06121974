@@ -1,0 +1,182 @@
+{
+ "schema": 1,
+ "meta": {
+  "id": "news-archive-2026-10-25",
+  "kind": "archive",
+  "reportPeriod": "19.–25.10.2026",
+  "intro": "Ein eigener Nachrichtenbereich neben den Marktdaten. Durchsuche die bereits im Wochenbericht hinterlegten Artikelverweise nach Coin und Thema.",
+  "status": "**Archivansicht, kein Live-Feed.** Bezug: Bericht 19.–25.10.2026. Die Verweise wurden aus dem bestehenden Bericht übernommen und nicht erneut inhaltlich geprüft. Angezeigte Titel sind redaktionelle Themenlabels, keine übernommenen Originalüberschriften. Veröffentlichungszeitpunkte sind nicht verifiziert. Eine automatische Nachrichtenversorgung ist noch nicht eingerichtet."
+ },
+ "items": [
+  {
+   "id": "btc-eth-etf",
+   "original_url": "https://www.benzinga.com/etfs/specialty-etfs/26/10/62531539/bitcoin-etfs-stage-a-1-billion-comeback-but-ether-etfs-cant-catch-a-break-whats-driving-the-divergence",
+   "source_name": "Benzinga",
+   "original_title": null,
+   "display_title": "Bitcoin- und Ethereum-ETF-Flüsse im Vergleich",
+   "summary": "Rechercheverweis aus dem bestehenden Wochenbericht zum Vergleich der ETF-Flüsse. Die damalige Einordnung ist keine aktuelle Meldung und wurde hier nicht erneut geprüft.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "BTC",
+    "ETH"
+   ],
+   "topic": "ETF",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "btc-etf",
+   "original_url": "https://cointelegraph.com/markets/bitcoin-etfs-527m-inflows-biggest-since-september",
+   "source_name": "Cointelegraph",
+   "original_title": null,
+   "display_title": "Bitcoin: Hintergrund zu den ETF-Zuflüssen",
+   "summary": "Im Wochenbericht hinterlegter Artikelverweis zu Bitcoin-Spot-ETFs. Für aktuelle Zahlen und den Originalkontext ist die Originalseite zu prüfen.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "BTC"
+   ],
+   "topic": "ETF",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "sol-etf",
+   "original_url": "https://cryptoticker.io/en/solana-price-prediction-etf-outflow-30-million-october-2026/",
+   "source_name": "CryptoTicker",
+   "original_title": null,
+   "display_title": "Solana: ETF-Abflüsse mit abweichendem Zeitfenster",
+   "summary": "Archivverweis zur SOL-ETF-Einordnung. Das im Bericht verwendete Fenster endet am 22.10. und ist nicht mit der vollständigen Berichtshandelswoche gleichzusetzen.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "SOL"
+   ],
+   "topic": "ETF",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "xrp-etf",
+   "original_url": "https://finance.yahoo.com/markets/crypto/articles/xrp-etfs-took-just-4-000032731.html",
+   "source_name": "Yahoo Finance",
+   "original_title": null,
+   "display_title": "XRP: ETF-Berichterstattung und Produktabdeckung",
+   "summary": "Archivverweis zur XRP-ETF-Berichterstattung. Unterschiedliche Produktabdeckung und Zeitfenster erlauben im übernommenen Bericht keinen belastbaren konsolidierten Wochenwert.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "XRP"
+   ],
+   "topic": "ETF",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "liquidations",
+   "original_url": "https://www.theblock.co/news/markets/2026-10-24-crypto-longs-lose-404-million-in-four-hours-as-bitcoin-briefly-slips-below-80000-431608",
+   "source_name": "The Block",
+   "original_title": null,
+   "display_title": "Liquidationen: kurze Ereignisfenster getrennt betrachten",
+   "summary": "Archivverweis zur Liquidationsanalyse des Wochenberichts. Vier-Stunden- und 24-Stunden-Fenster sowie Long- und Gesamtvolumen müssen getrennt bleiben; keine kausale Kurszuordnung.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "BTC",
+    "ETH"
+   ],
+   "topic": "Derivate",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "positioning",
+   "original_url": "https://www.tokenpost.com/news/investing/35831",
+   "source_name": "TokenPost",
+   "original_title": null,
+   "display_title": "Open Interest und Funding: datierte Snapshots",
+   "summary": "Hinterlegter Rechercheverweis zur Positionierung. Die Börsenabdeckung ist im Ausgangsbericht unbekannt; ein Snapshot ist weder ein Wochenmittel noch eine vollständige Zeitreihe.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP"
+   ],
+   "topic": "Derivate",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "tvl",
+   "original_url": "https://www.tokenpost.com/news/investing/38922",
+   "source_name": "TokenPost",
+   "original_title": null,
+   "display_title": "Ethereum und Solana: TVL als Netzwerkkennzahl",
+   "summary": "Archivverweis aus dem On-Chain-Teil. Stichtage und Vergleichsfenster müssen geprüft werden; TVL ist über unterschiedliche Chains nicht ohne Weiteres vergleichbar.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "ETH",
+    "SOL"
+   ],
+   "topic": "On-Chain",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "fees",
+   "original_url": "https://www.tokenpost.com/news/investing/35619",
+   "source_name": "TokenPost",
+   "original_title": null,
+   "display_title": "Netzwerkerlöse: Daten der Vorwoche",
+   "summary": "Dieser Quellenverweis gehört im bestehenden Bericht zum Fenster 12.–18.10.2026. Er ist ausdrücklich keine neue Meldung und kein Erlöswert der Berichtswoche.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "BTC",
+    "ETH",
+    "SOL"
+   ],
+   "topic": "On-Chain",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  },
+  {
+   "id": "macro",
+   "original_url": "https://finbazar.ru/post/706159-bitkoin-na-25-10-2026-itogi-nedeli-padenie-pod-davleniem-blizhnego-vostok",
+   "source_name": "Finbazar",
+   "original_title": null,
+   "display_title": "Marktumfeld: Rechercheverweis zum Wochenrückblick",
+   "summary": "Im Ausgangsbericht hinterlegter Marktkommentar. Meinungen und Marktdeutungen sind von verifizierten Ereignissen zu trennen; neue Makroaussagen werden hier nicht hinzugefügt.",
+   "summary_origin": "editorial_reference",
+   "coins": [
+    "BTC"
+   ],
+   "topic": "Makro",
+   "published_at": null,
+   "event_at": null,
+   "fetched_at": null,
+   "verification_status": "archive_unverified",
+   "report_period": "2026-10-19/2026-10-25"
+  }
+ ]
+}
