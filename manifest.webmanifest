@@ -1,0 +1,24 @@
+{
+  "id": "./",
+  "name": "Krypto-Wochen-Dashboard",
+  "short_name": "Krypto",
+  "description": "Archivbericht BTC, ETH, SOL, XRP mit Vorwochenvergleich und Nachrichtenarchiv. Keine Live-Daten.",
+  "lang": "de",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "categories": ["finance", "news"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Marktdaten", "short_name": "Markt", "url": "./#markt", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Nachrichten", "short_name": "News", "url": "./#nachrichten", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ]
+}

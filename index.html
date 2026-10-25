@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krypto-Wochen-Dashboard · BTC · ETH · SOL · XRP</title>
+<meta name="description" content="Krypto-Wochendashboard mit Vorwochenvergleich und filterbarem Nachrichtenarchiv. Archivbericht 19.–25.10.2026, kein Live-Feed.">
+<meta name="theme-color" content="#0d1117">
+<meta name="color-scheme" content="dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Krypto">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<div class="topbar" id="topbar">
+  <div class="topbar-in">
+    <span class="pill pill-archive" title="Übernommene historische Berichtsdaten, keine Live-Daten">Archivbericht</span>
+    <span class="topbar-stand" id="stand-short">Datenstand wird geladen …</span>
+    <span class="topbar-spacer"></span>
+    <span class="pill" id="pill-net" data-state="online" role="status">Online</span>
+    <button type="button" class="btn btn-accent" id="btn-install" hidden>App installieren</button>
+    <button type="button" class="btn" id="btn-info" aria-haspopup="dialog">Info &amp; Installation</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="eyebrow" id="hero-eyebrow">Krypto-Wochen-Dashboard</div>
+  <h1 id="hero-title">BTC · ETH · SOL · XRP</h1>
+  <p class="sub" id="hero-sub"></p>
+</header>
+
+<div id="banners" class="banners" aria-live="polite"></div>
+
+<nav class="app-nav" aria-label="Dashboard-Bereich">
+  <button type="button" data-view="market" aria-pressed="true" aria-controls="market-panel">Marktdaten</button>
+  <button type="button" data-view="news" aria-pressed="false" aria-controls="news-panel">Nachrichten</button>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<section id="market-panel" aria-label="Marktdaten" aria-busy="true">
+  <p class="loading" id="market-loading">Bericht wird geladen …</p>
+  <div id="market-error" class="load-error" role="alert" hidden></div>
+  <div id="market-content" hidden>
+    <div class="filters" role="group" aria-label="Filter Marktdaten">
+      <span class="fl" id="fl-coin">Coin</span>
+      <button type="button" class="chip" data-coin="all" aria-pressed="true">Alle</button>
+      <button type="button" class="chip" data-coin="BTC" aria-pressed="true">BTC</button>
+      <button type="button" class="chip" data-coin="ETH" aria-pressed="true">ETH</button>
+      <button type="button" class="chip" data-coin="SOL" aria-pressed="true">SOL</button>
+      <button type="button" class="chip" data-coin="XRP" aria-pressed="true">XRP</button>
+      <span class="sep" aria-hidden="true"></span>
+      <span class="fl" id="fl-grp">Kategorie</span>
+      <button type="button" class="chip" data-grp="all" aria-pressed="true">Alle</button>
+      <button type="button" class="chip" data-grp="Kurs" aria-pressed="false">Kurs</button>
+      <button type="button" class="chip" data-grp="ETF" aria-pressed="false">ETF</button>
+      <button type="button" class="chip" data-grp="Derivate" aria-pressed="false">Derivate</button>
+      <button type="button" class="chip" data-grp="On-Chain" aria-pressed="false">On-Chain</button>
+      <span class="hint">Mehrfachauswahl bei Coins · Filter wirken auf KPI-Karten, Charts und Tabelle</span>
+    </div>
+    <p class="filter-note" id="filter-note" role="status" aria-live="polite"></p>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="grid2" id="charts">
+      <div class="card">
+        <h2 id="t-perf"></h2>
+        <div class="cnote" id="n-perf"></div>
+        <ul class="legend" id="lg-perf" aria-label="Legende Kursverlauf"></ul>
+        <div class="chartbox h250"><canvas id="chPerf" role="img" aria-label="Liniendiagramm Wochenperformance"></canvas></div>
+        <details class="chart-table"><summary>Werte als Tabelle</summary><div class="ct-scroll" id="ct-perf"></div></details>
+      </div>
+      <div class="card">
+        <h2 id="t-flow"></h2>
+        <div class="cnote" id="n-flow"></div>
+        <ul class="legend" id="lg-flow" aria-label="Legende ETF-Flüsse"></ul>
+        <div class="chartbox h250"><canvas id="chFlow" role="img" aria-label="Balkendiagramm ETF-Tagesflüsse"></canvas></div>
+        <details class="chart-table"><summary>Werte als Tabelle</summary><div class="ct-scroll" id="ct-flow"></div></details>
+      </div>
+      <div class="card">
+        <h2 id="t-bp"></h2>
+        <div class="cnote" id="n-bp"></div>
+        <div class="chartbox h190"><canvas id="chBp" role="img" aria-label="Balkendiagramm ETF-Wochenfluss in Basispunkten"></canvas></div>
+        <details class="chart-table"><summary>Werte als Tabelle</summary><div class="ct-scroll" id="ct-bp"></div></details>
+      </div>
+      <div class="card">
+        <h2 id="t-ret"></h2>
+        <div class="cnote" id="n-ret"></div>
+        <div class="chartbox h190"><canvas id="chRet" role="img" aria-label="Balkendiagramm Wochenrendite in Prozent"></canvas></div>
+        <details class="chart-table"><summary>Werte als Tabelle</summary><div class="ct-scroll" id="ct-ret"></div></details>
+      </div>
+    </div>
+
+    <section class="tbl-sec" aria-label="Kennzahlen mit Vorwochenvergleich">
+      <div class="tbl-card" id="tbl-card">
+        <div class="wow-note" id="wow-note"></div>
+        <div class="only-wide">
+          <div class="tbl-scroll" tabindex="0" role="region" aria-label="Kennzahlentabelle, horizontal scrollbar">
+            <table id="dt">
+              <thead id="thead"></thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="only-narrow" id="coin-cards"></div>
+        <div class="tbl-foot" id="tbl-foot"></div>
+      </div>
+    </section>
+
+    <div class="context" id="context"></div>
+
+    <h2 class="verdicts-h" id="verdicts-title"></h2>
+    <div class="verdicts" id="verdicts"></div>
+
+    <div class="method" id="method"></div>
+  </div>
+</section>
+
+<section id="news-panel" aria-labelledby="news-heading" hidden>
+  <div class="news-intro">
+    <h2 id="news-heading">Krypto-Nachrichten</h2>
+    <p id="news-intro-text">Ein eigener Nachrichtenbereich neben den Marktdaten.</p>
+  </div>
+  <div class="news-status" id="news-status"><b>Archivansicht, kein Live-Feed.</b></div>
+  <div id="news-error" class="load-error" role="alert" hidden></div>
+  <div id="news-content">
+    <div class="news-controls" role="search" aria-label="Nachrichten filtern">
+      <label class="news-search">Suche<input id="news-search" type="search" placeholder="Thema, Coin oder Publikation" maxlength="200" autocomplete="off"></label>
+      <label>Coin<select id="news-coin"><option value="all">Alle Coins</option><option>BTC</option><option>ETH</option><option>SOL</option><option>XRP</option></select></label>
+      <label>Thema<select id="news-topic"><option value="all">Alle Themen</option><option value="ETF">ETF &amp; Kapitalflüsse</option><option value="Derivate">Derivate &amp; Liquidationen</option><option value="On-Chain">On-Chain &amp; Netzwerk</option><option value="Regulierung">Regulierung</option><option value="Makro">Makro &amp; Marktumfeld</option></select></label>
+      <button type="button" class="news-reset" id="news-reset">Filter zurücksetzen</button>
+    </div>
+    <p id="news-count" class="news-count" role="status" aria-live="polite"></p>
+    <div id="news-grid" class="news-grid"></div>
+    <div id="news-empty" class="news-empty" hidden></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="srcs" id="sources"></footer>
+
+<noscript><p class="load-error">Diese App benötigt JavaScript.</p></noscript>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog id="info-dialog" aria-labelledby="info-title">
+  <div class="dlg-head">
+    <h2 id="info-title">Info &amp; Installation</h2>
+    <button type="button" class="btn" id="info-close">Schließen</button>
+  </div>
+  <div class="dlg-body">
+
+    <section>
+      <h3>Datenstand und App-Version</h3>
+      <dl class="kv">
+        <dt>Bericht</dt><dd id="i-report">–</dd>
+        <dt>Datenstand</dt><dd id="i-stand">–</dd>
+        <dt>Anzeige geladen</dt><dd id="i-source">–</dd>
+        <dt>App-Version</dt><dd id="i-version">–</dd>
+        <dt>Offline-Speicher</dt><dd id="i-sw">–</dd>
+        <dt>Lokale Einstellungen</dt><dd id="i-storage">–</dd>
+        <dt>Anzeigemodus</dt><dd id="i-mode">–</dd>
+      </dl>
+      <p class="note"><b>Archivbericht, keine Live-Aktualisierung eingerichtet.</b> Ein App-Update ändert nur den App-Code, nicht den Datenstand des Berichts. Offline siehst du genau den zuletzt gespeicherten Stand.</p>
+    </section>
+
+    <section>
+      <h3>App installieren</h3>
+      <p class="note" id="i-install-state"></p>
+
+      <details id="g-ios">
+        <summary>iPhone (Safari)</summary>
+        <ol>
+          <li>Diese Seite in <b>Safari</b> öffnen (nicht in einer anderen App-Vorschau).</li>
+          <li>Unten auf <b>Teilen</b> tippen (Quadrat mit Pfeil nach oben).</li>
+          <li><b>Zum Home-Bildschirm</b> wählen und mit <b>Hinzufügen</b> bestätigen. Falls angeboten, „Als Web-App öffnen“ eingeschaltet lassen.</li>
+          <li>Die App ab jetzt <b>über das neue Symbol auf dem Home-Bildschirm</b> starten und dort einmal mit Internet öffnen, damit der Offline-Speicher gefüllt wird.</li>
+        </ol>
+        <p class="note">iOS bietet keinen automatischen Installationsdialog; deshalb gibt es auf dem iPhone keinen „Installieren“-Knopf. Die Home-Bildschirm-App kann einen eigenen Speicher haben, getrennt von Safari.</p>
+      </details>
+
+      <details id="g-edge">
+        <summary>Windows – Microsoft Edge</summary>
+        <ol>
+          <li>Seite in Edge öffnen.</li>
+          <li>Installationssymbol rechts in der Adressleiste anklicken oder <b>Menü (⋯) → Apps → Diese Website als App installieren</b>. (Alternativ hier den Knopf „App installieren“ oben, falls sichtbar.)</li>
+          <li>Mit <b>Installieren</b> bestätigen. Edge fragt meist, ob die App an <b>Start</b>, <b>Taskleiste</b> oder den Desktop angeheftet werden soll.</li>
+          <li>Nachträglich anheften: App starten, in der Taskleiste Rechtsklick auf das App-Symbol → <b>An Taskleiste anheften</b>; im Startmenü Rechtsklick → <b>An „Start“ anheften</b>.</li>
+        </ol>
+      </details>
+
+      <details id="g-chrome">
+        <summary>Windows – Google Chrome</summary>
+        <ol>
+          <li>Seite in Chrome öffnen.</li>
+          <li>Installationssymbol rechts in der Adressleiste anklicken oder <b>Menü (⋮) → Speichern und teilen → Seite als App installieren</b>. (Alternativ hier den Knopf „App installieren“ oben, falls sichtbar.)</li>
+          <li>Mit <b>Installieren</b> bestätigen. Je nach Version bietet Chrome Verknüpfungen für Desktop oder Taskleiste an.</li>
+          <li>Nachträglich anheften: Rechtsklick auf das App-Symbol in der Taskleiste → <b>An Taskleiste anheften</b>, oder im Startmenü → <b>An „Start“ anheften</b>.</li>
+        </ol>
+      </details>
+
+      <details id="g-other">
+        <summary>Andere Browser</summary>
+        <p class="note">Firefox unter Windows installiert keine Web-Apps; dort bleibt es bei der Nutzung im Browser-Tab. Safari am Mac: <b>Ablage → Zum Dock hinzufügen</b>. Menünamen können je nach Version abweichen.</p>
+      </details>
+
+      <details id="g-remove">
+        <summary>Deinstallieren</summary>
+        <p class="note"><b>iPhone:</b> Symbol lange drücken → App entfernen. <b>Windows:</b> App-Fenster öffnen → Menü (⋯ oder ⋮) → App deinstallieren; oder Einstellungen → Apps → Installierte Apps. Dabei können lokale Einstellungen und der Offline-Speicher gelöscht werden (ggf. fragt der Browser danach). Eine Neuinstallation startet sauber; zuvor gespeicherte Einstellungen sind dann möglicherweise weg.</p>
+      </details>
+    </section>
+
+    <section>
+      <h3>Lokale Einstellungen</h3>
+      <p class="note">Einstellungen (Coin-/Kategorie-Auswahl, zuletzt geöffneter Bereich, Nachrichtenfilter) werden <b>nur in diesem Browser bzw. dieser installierten App auf diesem Gerät</b> gespeichert. Es gibt <b>keine automatische Synchronisation</b> zwischen iPhone und Windows – jede Installation hat ihren eigenen Speicher. Das System kann Browser-Speicher bei Platzmangel löschen.</p>
+      <div class="btn-row">
+        <button type="button" class="btn" id="btn-reset-settings">Einstellungen zurücksetzen</button>
+        <button type="button" class="btn btn-danger" id="btn-reset-cache">Offline-Speicher leeren und neu laden</button>
+      </div>
+    </section>
+  </div>
+</dialog>
+
+<script src="app-version.js" defer></script>
+<script src="vendor/chart.umd.min.js" defer></script>
+<script src="core.js" defer></script>
+<script src="market.js" defer></script>
+<script src="news.js" defer></script>
+<script src="pwa.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "krypto-wochen-dashboard-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Krypto-Wochen-Dashboard als installierbare PWA (iPhone + Windows), Archivbericht 19.–25.10.2026",
+  "type": "module",
+  "scripts": {
+    "stamp": "node tools/stamp.mjs",
+    "stamp:check": "node tools/stamp.mjs --check",
+    "start": "node tools/stamp.mjs && node tools/serve.mjs",
+    "test": "node tools/stamp.mjs && node tests/run.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
