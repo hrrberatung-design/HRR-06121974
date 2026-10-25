@@ -4,8 +4,8 @@
   const K = window.K;
   const { $ } = K;
 
-  const REPORT_URL = 'data/report-2026-10-25.json';
-  const NEWS_URL = 'data/news-archive.json';
+  const REPORT_URL = 'report-2026-10-25.json';
+  const NEWS_URL = 'news-archive.json';
   const VIEWS = { market: { hash: '#markt', title: 'Marktdaten' }, news: { hash: '#nachrichten', title: 'Nachrichten' } };
   let marketReady = false;
 

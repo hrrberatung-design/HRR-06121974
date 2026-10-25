@@ -1,3 +1,3 @@
-/* Automatisch erzeugt von tools/stamp.mjs – nicht von Hand ändern. */
+/* Automatisch erzeugt – nicht von Hand ändern. */
 self.APP_VERSION = "1.0.0";
-self.APP_BUILD = "538a500da1ee";
+self.APP_BUILD = "e63c640424ea";

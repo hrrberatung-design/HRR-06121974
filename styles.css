@@ -1,6 +1,6 @@
-/* Krypto-Wochen-Dashboard – Stile. Schriften lokal (siehe fonts/), keine externen Ressourcen. */
-@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('fonts/inter-latin-wght-normal.woff2') format('woff2-variations'), url('fonts/inter-latin-wght-normal.woff2') format('woff2'); }
-@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 100 800; font-display: swap; src: url('fonts/jetbrains-mono-latin-wght-normal.woff2') format('woff2-variations'), url('fonts/jetbrains-mono-latin-wght-normal.woff2') format('woff2'); }
+/* Krypto-Wochen-Dashboard – Stile. Schriften lokal (siehe ), keine externen Ressourcen. */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('inter-latin-wght-normal.woff2') format('woff2-variations'), url('inter-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 100 800; font-display: swap; src: url('jetbrains-mono-latin-wght-normal.woff2') format('woff2-variations'), url('jetbrains-mono-latin-wght-normal.woff2') format('woff2'); }
 
 :root, [data-theme="dark"] {
   --bg: #0d1117;

@@ -29,18 +29,18 @@ const APP_FILES = [
   './pwa.js',
   './app.js',
   './manifest.webmanifest',
-  './vendor/chart.umd.min.js',
-  './fonts/inter-latin-wght-normal.woff2',
-  './fonts/jetbrains-mono-latin-wght-normal.woff2',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/icon-maskable-512.png',
-  './icons/apple-touch-icon.png',
-  './icons/favicon-32.png'
+  './chart.umd.min.js',
+  './inter-latin-wght-normal.woff2',
+  './jetbrains-mono-latin-wght-normal.woff2',
+  './icon-192.png',
+  './icon-512.png',
+  './icon-maskable-512.png',
+  './apple-touch-icon.png',
+  './favicon-32.png'
 ];
 const DATA_FILES = [
-  './data/report-2026-10-25.json',
-  './data/news-archive.json'
+  './report-2026-10-25.json',
+  './news-archive.json'
 ];
 
 self.addEventListener('install', event => {
@@ -118,7 +118,7 @@ self.addEventListener('fetch', event => {
   const rel = url.pathname.startsWith(base) ? url.pathname.slice(base.length) : null;
   if (rel === null) return;
 
-  if (rel.startsWith('data/') && rel.endsWith('.json')) {
+  if (/^(report-[\w-]+|news-archive)\.json$/.test(rel)) {
     event.respondWith(networkFirstData(req));
     return;
   }
